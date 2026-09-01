@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="SheHealth - personalized nutrition and wellness support for working and pregnant women."
+  >
+
+  <title>SheHealth | Women's Wellness</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="topbar">
+
+    <div class="brand">
+      <div class="brand-logo">♡</div>
+
+      <div>
+        <h1>SheHealth</h1>
+        <span>Nutrition • Wellness • Care</span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" title="Change theme">☀</button>
+      <button id="profileBtn" class="profile-mini">Profile</button>
+    </div>
+
+  </header>
+
+
+  <!-- ================= APP ================= -->
+
+  <main class="app-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <nav>
+
+        <button class="nav-btn active" data-section="dashboard">
+          <span>⌂</span>
+          Dashboard
+        </button>
+
+        <button class="nav-btn" data-section="meals">
+          <span>🍎</span>
+          Meal Planner
+        </button>
+
+        <button class="nav-btn" data-section="foods">
+          <span>🥗</span>
+          Food Database
+        </button>
+
+        <button class="nav-btn" data-section="hydration">
+          <span>💧</span>
+          Hydration
+        </button>
+
+        <button class="nav-btn" data-section="wellness">
+          <span>❤</span>
+          Wellness
+        </button>
+
+        <button class="nav-btn" data-section="tasks">
+          <span>✓</span>
+          Daily Tasks
+        </button>
+
+        <button class="nav-btn" data-section="profile">
+          <span>⚙</span>
+          My Profile
+        </button>
+
+      </nav>
+
+      <div class="sidebar-footer">
+        <small>SheHealth Prototype</small>
+        <small>For wellness support only</small>
+      </div>
+
+    </aside>
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+      <!-- ================= DASHBOARD ================= -->
+
+      <section id="dashboard" class="page active">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">GOOD MORNING</p>
+            <h2>Hi, <span id="welcomeName">there</span> 👋</h2>
+            <p class="muted">
+              Let's take care of your health today.
+            </p>
+          </div>
+
+          <div class="date-box">
+            <span id="todayDate"></span>
+          </div>
+
+        </div>
+
+
+        <!-- USER STATUS -->
+
+        <div class="hero-card">
+
+          <div>
+            <span class="badge" id="userModeBadge">Working Woman</span>
+
+            <h3 id="heroTitle">
+              Your health, your routine.
+            </h3>
+
+            <p id="heroDescription">
+              Stay hydrated, eat regularly and take small wellness breaks.
+            </p>
+
+            <button class="primary-btn" data-section-target="meals">
+              View Today's Plan →
+            </button>
+          </div>
+
+          <div class="hero-icon">🌸</div>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <div class="stat-icon">💧</div>
+            <span>Water</span>
+            <strong id="dashboardWater">0 / 8</strong>
+            <small>glasses</small>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🍽</div>
+            <span>Meals</span>
+            <strong id="dashboardMeals">0 / 4</strong>
+            <small>completed</small>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">😊</div>
+            <span>Mood</span>
+            <strong id="dashboardMood">—</strong>
+            <small>today</small>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <span>Streak</span>
+            <strong id="dashboardStreak">0</strong>
+            <small>days</small>
+          </div>
+
+        </div>
+
+
+        <!-- RECOMMENDATION -->
+
+        <div class="section-header">
+
+          <div>
+            <p class="eyebrow">PERSONALIZED</p>
+            <h3>Today's Wellness Insight</h3>
+          </div>
+
+        </div>
+
+        <div class="recommendation-card">
+
+          <div class="recommendation-icon">✨</div>
+
+          <div>
+            <h4 id="recommendationTitle">
+              Start with a balanced breakfast
+            </h4>
+
+            <p id="recommendationText">
+              A regular breakfast can help maintain your energy throughout
+              the morning.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">QUICK ACTIONS</p>
+            <h3>What would you like to do?</h3>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+
+          <button class="quick-card" data-section-target="meals">
+            <span>🍽</span>
+            <strong>Plan Meals</strong>
+            <small>See today's meals</small>
+          </button>
+
+          <button class="quick-card" data-section-target="hydration">
+            <span>💧</span>
+            <strong>Track Water</strong>
+            <small>Update hydration</small>
+          </button>
+
+          <button class="quick-card" data-section-target="wellness">
+            <span>🧘</span>
+            <strong>Check Wellness</strong>
+            <small>Track how you feel</small>
+          </button>
+
+          <button class="quick-card" data-section-target="foods">
+            <span>🥗</span>
+            <strong>Explore Foods</strong>
+            <small>Search nutrition</small>
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= MEALS ================= -->
+
+      <section id="meals" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">NUTRITION</p>
+            <h2>Meal Planner</h2>
+            <p class="muted" id="mealSubtitle">
+              Practical meals designed around your profile.
+            </p>
+          </div>
+
+          <button id="refreshMeals" class="secondary-btn">
+            ↻ Refresh
+          </button>
+
+        </div>
+
+
+        <div id="pregnancySelector" class="pregnancy-panel hidden">
+
+          <div>
+            <strong>Pregnancy Stage</strong>
+            <p>Select your current trimester.</p>
+          </div>
+
+          <div class="trimester-buttons">
+
+            <button class="trimester-btn" data-trimester="1">
+              1st Trimester
+            </button>
+
+            <button class="trimester-btn" data-trimester="2">
+              2nd Trimester
+            </button>
+
+            <button class="trimester-btn" data-trimester="3">
+              3rd Trimester
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="nutrition-note">
+
+          <span>💡</span>
+
+          <div>
+            <strong>Your personalized focus</strong>
+            <p id="nutritionFocus">
+              Balanced meals, hydration and regular eating.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div id="mealList" class="meal-grid"></div>
+
+      </section>
+
+
+      <!-- ================= FOOD DATABASE ================= -->
+
+      <section id="foods" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">EXPLORE</p>
+            <h2>Food Database</h2>
+            <p class="muted">
+              Explore simple Indian food options.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="search-box">
+
+          <span>🔎</span>
+
+          <input
+            id="foodSearch"
+            type="search"
+            placeholder="Search food, e.g. paneer, dal, poha..."
+          >
+
+        </div>
+
+
+        <div class="filter-row">
+
+          <button class="filter-btn active" data-food-filter="all">
+            All
+          </button>
+
+          <button class="filter-btn" data-food-filter="breakfast">
+            Breakfast
+          </button>
+
+          <button class="filter-btn" data-food-filter="lunch">
+            Lunch
+          </button>
+
+          <button class="filter-btn" data-food-filter="snack">
+            Snacks
+          </button>
+
+          <button class="filter-btn" data-food-filter="dinner">
+            Dinner
+          </button>
+
+        </div>
+
+
+        <div id="foodList" class="food-grid"></div>
+
+      </section>
+
+
+      <!-- ================= HYDRATION ================= -->
+
+      <section id="hydration" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">DAILY WELLNESS</p>
+            <h2>Hydration</h2>
+            <p class="muted">
+              Keep track of your water intake.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="water-card">
+
+          <div class="water-circle">
+
+            <div>
+              <strong id="waterCount">0</strong>
+              <span>/ <span id="waterGoal">8</span></span>
+              <small>glasses</small>
+            </div>
+
+          </div>
+
+
+          <div class="water-info">
+
+            <h3>Stay hydrated 💧</h3>
+
+            <p id="waterMessage">
+              Start your hydration journey today.
+            </p>
+
+            <div class="progress">
+              <div id="waterProgress" class="progress-fill"></div>
+            </div>
+
+            <div class="water-actions">
+
+              <button id="addWater" class="primary-btn">
+                + Add Water
+              </button>
+
+              <button id="removeWater" class="secondary-btn">
+                − Remove
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">TODAY</p>
+            <h3>Hydration Timeline</h3>
+          </div>
+        </div>
+
+        <div id="waterTimeline" class="timeline"></div>
+
+      </section>
+
+
+      <!-- ================= WELLNESS ================= -->
+
+      <section id="wellness" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">MENTAL WELLNESS</p>
+            <h2>How are you feeling?</h2>
+            <p class="muted">
+              A small check-in can help you notice your daily patterns.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="mood-card">
+
+          <h3>Select your mood</h3>
+
+          <div class="mood-options">
+
+            <button class="mood-btn" data-mood="Excellent">
+              😍
+              <span>Excellent</span>
+            </button>
+
+            <button class="mood-btn" data-mood="Good">
+              🙂
+              <span>Good</span>
+            </button>
+
+            <button class="mood-btn" data-mood="Okay">
+              😐
+              <span>Okay</span>
+            </button>
+
+            <button class="mood-btn" data-mood="Tired">
+              😴
+              <span>Tired</span>
+            </button>
+
+            <button class="mood-btn" data-mood="Stressed">
+              😟
+              <span>Stressed</span>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="wellness-grid">
+
+          <div class="wellness-card">
+            <span>🧘</span>
+            <h3>Take a break</h3>
+            <p>Spend a few minutes breathing and relaxing.</p>
+            <button class="secondary-btn wellness-tip">
+              Start
+            </button>
+          </div>
+
+          <div class="wellness-card">
+            <span>🚶</span>
+            <h3>Gentle movement</h3>
+            <p>Take a short movement break when appropriate.</p>
+            <button class="secondary-btn wellness-tip">
+              Reminder
+            </button>
+          </div>
+
+          <div class="wellness-card">
+            <span>🌙</span>
+            <h3>Rest</h3>
+            <p>Give your body enough time to recover.</p>
+            <button class="secondary-btn wellness-tip">
+              Tip
+            </button>
+          </div>
+
+        </div>
+
+
+        <div class="journal-card">
+
+          <div>
+            <p class="eyebrow">PRIVATE JOURNAL</p>
+            <h3>How was your day?</h3>
+          </div>
+
+          <textarea
+            id="journal"
+            placeholder="Write a few words about your day..."
+          ></textarea>
+
+          <button id="saveJournal" class="primary-btn">
+            Save Note
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= TASKS ================= -->
+
+      <section id="tasks" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">DAILY ROUTINE</p>
+            <h2>Today's Tasks</h2>
+            <p class="muted">
+              Small healthy habits can make a difference.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div id="taskList" class="task-list"></div>
+
+
+        <div class="add-task">
+
+          <input
+            id="newTask"
+            type="text"
+            placeholder="Add a personal task..."
+          >
+
+          <button id="addTaskBtn" class="primary-btn">
+            Add
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= PROFILE ================= -->
+
+      <section id="profile" class="page">
+
+        <div class="page-heading">
+
+          <div>
+            <p class="eyebrow">PERSONALIZATION</p>
+            <h2>My Profile</h2>
+            <p class="muted">
+              Your profile helps personalize the experience.
+            </p>
+          </div>
+
+        </div>
+
+
+        <form id="profileForm" class="profile-form">
+
+          <div class="form-section">
+
+            <h3>Basic Information</h3>
+
+            <div class="form-grid">
+
+              <label>
+                Name
+                <input id="profileName" type="text" required>
+              </label>
+
+              <label>
+                Age
+                <input id="profileAge" type="number" min="18" max="80">
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-section">
+
+            <h3>Your Category</h3>
+
+            <div class="mode-selector">
+
+              <label class="mode-option">
+
+                <input
+                  type="radio"
+                  name="mode"
+                  value="working"
+                >
+
+                <span>
+                  👩‍💼
+                  <strong>Working Woman</strong>
+                  <small>Busy work & daily routine</small>
+                </span>
+
+              </label>
+
+
+              <label class="mode-option">
+
+                <input
+                  type="radio"
+                  name="mode"
+                  value="pregnant"
+                >
+
+                <span>
+                  🤰
+                  <strong>Pregnant Woman</strong>
+                  <small>Pregnancy nutrition support</small>
+                </span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-section">
+
+            <h3>Diet Preference</h3>
+
+            <div class="form-grid">
+
+              <label>
+                Diet
+                <select id="profileDiet">
+
+                  <option value="vegetarian">
+                    Vegetarian
+                  </option>
+
+                  <option value="non-vegetarian">
+                    Non-Vegetarian
+                  </option>
+
+                  <option value="vegan">
+                    Vegan
+                  </option>
+
+                </select>
+              </label>
+
+
+              <label>
+                Activity
+                <select id="profileActivity">
+
+                  <option value="low">
+                    Low
+                  </option>
+
+                  <option value="moderate" selected>
+                    Moderate
+                  </option>
+
+                  <option value="high">
+                    High
+                  </option>
+
+                </select>
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <div id="profileTrimesterSection" class="form-section hidden">
+
+            <h3>Pregnancy Stage</h3>
+
+            <select id="profileTrimester">
+
+              <option value="1">1st Trimester</option>
+              <option value="2">2nd Trimester</option>
+              <option value="3">3rd Trimester</option>
+
+            </select>
+
+          </div>
+
+
+          <button class="primary-btn save-profile-btn" type="submit">
+            Save Profile
+          </button>
+
+        </form>
+
+
+        <div class="medical-disclaimer">
+
+          <strong>Important health notice</strong>
+
+          <p>
+            SheHealth is a wellness and nutrition-support prototype.
+            It does not diagnose medical conditions or replace advice
+            from a qualified doctor, dietitian or healthcare professional.
+          </p>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div id="toast" class="toast"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

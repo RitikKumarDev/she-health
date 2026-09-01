@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1,
+    "name": "Poha",
+    "category": "breakfast",
+    "userType": "working",
+    "calories": 250,
+    "protein": "6g",
+    "focus": "Energy and fibre"
+  },
+  {
+    "id": 2,
+    "name": "Oats and Banana",
+    "category": "breakfast",
+    "userType": "working",
+    "calories": 320,
+    "protein": "10g",
+    "focus": "Energy and fibre"
+  },
+  {
+    "id": 3,
+    "name": "Dal Roti and Sabzi",
+    "category": "lunch",
+    "userType": "working",
+    "calories": 450,
+    "protein": "16g",
+    "focus": "Protein and fibre"
+  },
+  {
+    "id": 4,
+    "name": "Vegetable Khichdi",
+    "category": "dinner",
+    "userType": "working",
+    "calories": 350,
+    "protein": "12g",
+    "focus": "Balanced meal"
+  },
+  {
+    "id": 5,
+    "name": "Oats, Banana and Milk",
+    "category": "breakfast",
+    "userType": "pregnant",
+    "trimester": 1,
+    "calories": 320,
+    "protein": "10g",
+    "focus": "Fibre and protein"
+  },
+  {
+    "id": 6,
+    "name": "Dal Roti and Vegetables",
+    "category": "lunch",
+    "userType": "pregnant",
+    "trimester": 1,
+    "calories": 450,
+    "protein": "16g",
+    "focus": "Protein and iron"
+  },
+  {
+    "id": 7,
+    "name": "Idli and Vegetable Sambar",
+    "category": "breakfast",
+    "userType": "pregnant",
+    "trimester": 2,
+    "calories": 300,
+    "protein": "9g",
+    "focus": "Protein and fibre"
+  },
+  {
+    "id": 8,
+    "name": "Paneer, Roti and Vegetables",
+    "category": "lunch",
+    "userType": "pregnant",
+    "trimester": 2,
+    "calories": 480,
+    "protein": "20g",
+    "focus": "Protein and calcium"
+  },
+  {
+    "id": 9,
+    "name": "Curd and Seasonal Fruit",
+    "category": "snack",
+    "userType": "pregnant",
+    "trimester": 2,
+    "calories": 180,
+    "protein": "5g",
+    "focus": "Calcium and vitamins"
+  },
+  {
+    "id": 10,
+    "name": "Vegetable Upma and Fruit",
+    "category": "breakfast",
+    "userType": "pregnant",
+    "trimester": 3,
+    "calories": 310,
+    "protein": "8g",
+    "focus": "Energy and fibre"
+  },
+  {
+    "id": 11,
+    "name": "Dal, Roti, Sabzi and Curd",
+    "category": "lunch",
+    "userType": "pregnant",
+    "trimester": 3,
+    "calories": 500,
+    "protein": "18g",
+    "focus": "Protein and calcium"
+  },
+  {
+    "id": 12,
+    "name": "Vegetable Khichdi",
+    "category": "dinner",
+    "userType": "pregnant",
+    "trimester": 3,
+    "calories": 380,
+    "protein": "12g",
+    "focus": "Balanced nutrition"
+  }
+]
